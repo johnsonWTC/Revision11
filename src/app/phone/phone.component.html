@@ -1,1 +1,13 @@
-<p>phone works!</p>
+<div [hidden]="showTableBtn">
+<Table>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Camera</th>
+    <tr  *ngFor="let phone of phones">
+        <td>{{phone.name}}</td>
+        <td>{{phone.size}}</td>
+        <td>{{phone.camera}}</td>
+    </tr>
+</Table>
+</div>
+<button [innerText]="showTableBtnText" (click)="ShowTableAndHidetable()"></button>
